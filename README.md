@@ -2,6 +2,8 @@
 
 _A classic snake game where you're in a race against time!_
 
+**Play Here** [**Itch io Page**](https://gurgames.itch.io/slither-fade)**.**
+
 ## What is Slither Fade?
 
 Slither Fade is a challenging twist on the beloved classic. Instead of just growing, your snake is constantly **shrinking** every 7 seconds, losing a segment from its tail. You must eat food not just to grow, but to survive!
