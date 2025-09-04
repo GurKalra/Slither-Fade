@@ -63,19 +63,6 @@ public class Snake : MonoBehaviour
         {
             Shrink();
         }
-        int size = _segments.Count;
-        if (size <= 4)
-        {
-            _speed = 0.04f;
-        }
-        else if (size > 4 && size <= 10)
-        {
-            _speed = 0.09f;
-        }
-        else
-        {
-            _speed = 0.07f;
-        }
 
     }
 
@@ -97,7 +84,7 @@ public class Snake : MonoBehaviour
         if (_segments.Count > 1)
         {
             Transform lastSegment = _segments[_segments.Count - 1];
-            
+
             _segments.RemoveAt(_segments.Count - 1);
             
             Destroy(lastSegment.gameObject);
@@ -125,7 +112,7 @@ public class Snake : MonoBehaviour
         else if (collision.tag == "SafeFood")
         {
             Grow();
-            _currentTimer = -5f;
+            _currentTimer = -10f;
         }
         else if (collision.tag == "Obstacle")
         {

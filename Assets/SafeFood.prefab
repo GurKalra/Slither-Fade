@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 17930778871398720}
   - component: {fileID: 6295066588598215456}
   - component: {fileID: 6309039140676049179}
-  - component: {fileID: 5038102289875181160}
+  - component: {fileID: 3321388458564648164}
   m_Layer: 0
   m_Name: SafeFood
   m_TagString: Food
@@ -138,7 +138,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
---- !u!114 &5038102289875181160
+--- !u!114 &3321388458564648164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7844802391964121764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5783f592fd4d657bcbd34283bc48c430, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d9d54d34834e766b1a4ecd10c5f497, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Food
+  m_EditorClassIdentifier: Assembly-CSharp::SafeFood
   gridArea: {fileID: 0}
+  safeFoodPrefab: {fileID: 0}
