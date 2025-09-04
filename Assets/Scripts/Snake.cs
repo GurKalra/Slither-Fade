@@ -19,6 +19,7 @@ public class Snake : MonoBehaviour
     }
     private void Update()
     {
+        if (!GameManager.Instance.isGameActive) return;
 
         if (Keyboard.current.wKey.IsPressed())
         {
@@ -41,6 +42,7 @@ public class Snake : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance.isGameActive) return;
         _currentTimer += Time.deltaTime;
         _moveTimer += Time.deltaTime;
 
@@ -77,6 +79,10 @@ public class Snake : MonoBehaviour
         _segments.Add(this.transform);
 
         this.transform.position = Vector3.zero;
+        if (GameManager.Instance != null && GameManager.Instance.isGameActive)
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 
     private void Shrink()
@@ -101,6 +107,8 @@ public class Snake : MonoBehaviour
         Transform segment = Instantiate(this.segmentPrefab);
         segment.position = _segments[_segments.Count - 1].position;
         _segments.Add(segment);
+
+        GameManager.Instance.IncreaseScore();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
