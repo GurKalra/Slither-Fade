@@ -16,6 +16,7 @@ public class Snake : MonoBehaviour
     private void Start()
     {
         _segments.Add(this.transform);
+        AudioManager.Instance.PlayMusic();
     }
     private void Update()
     {
@@ -87,12 +88,13 @@ public class Snake : MonoBehaviour
 
     private void Shrink()
     {
+        AudioManager.Instance.PlayShrinkSound();
         if (_segments.Count > 1)
         {
             Transform lastSegment = _segments[_segments.Count - 1];
 
             _segments.RemoveAt(_segments.Count - 1);
-            
+
             Destroy(lastSegment.gameObject);
         }
         else
@@ -109,6 +111,7 @@ public class Snake : MonoBehaviour
         _segments.Add(segment);
 
         GameManager.Instance.IncreaseScore();
+        AudioManager.Instance.PlayEatSound();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

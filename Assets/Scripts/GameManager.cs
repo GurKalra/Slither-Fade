@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         scoreText.gameObject.SetActive(true);
         score = 0;
         UpdateScore();
+        AudioManager.Instance.PlayMusic();
     }
 
     public void QuitGame()
@@ -61,6 +62,9 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         Time.timeScale = 0f;
         startMenu.SetActive(true);
+        score = 0;
+        UpdateScore();
+        AudioManager.Instance.PlayMusic();
     }
     public void UpdateScore()
     {
