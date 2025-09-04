@@ -17,7 +17,7 @@ The game features two types of food:
 
 You can download and play the latest version of the game from the official releases page.
 
-1. **Go to the** [**Releases Page**]([https://github.com/GurKalra/Slither-Fade/releases/tag/v1.0])**.**
+1. **Go to the** [**Releases Page**](https://github.com/GurKalra/Slither-Fade/releases/tag/v1.0)**.**
 2. Download the `.zip` file for your operating system (`Windows-Build.zip` or `Linux-Build.zip`).
 3. Unzip or extract the folder to a location of your choice.
 
